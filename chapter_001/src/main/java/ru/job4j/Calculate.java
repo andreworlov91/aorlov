@@ -7,7 +7,7 @@ public class Calculate {
 	
     /**
      * Метод main для вывода фразы Hello World!
-	 *
+	 
      * @param args   - параметр метода.
      */
     public static void main (String ... args) {
