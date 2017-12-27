@@ -12,6 +12,9 @@ import static org.junit.Assert.assertThat;
 public class DummyBotTest {
     private static DummyBot instance;
 
+    /**
+     * Test answer.
+     */
     private static DummyBot getInstance() {
         if (instance == null) {
             instance = new DummyBot();
@@ -19,6 +22,9 @@ public class DummyBotTest {
         return instance;
     }
 
+    /**
+     * Test answer.
+     */
     @Test
     public void whenGreetBot() {
         assertThat(
@@ -27,6 +33,9 @@ public class DummyBotTest {
         );
     }
 
+    /**
+     * Test answer.
+     */
     @Test
     public void whenByuBot() {
         assertThat(
@@ -35,6 +44,9 @@ public class DummyBotTest {
         );
     }
 
+    /**
+     * Test answer.
+     */
     @Test
     public void whenUnknownBot() {
         assertThat(
