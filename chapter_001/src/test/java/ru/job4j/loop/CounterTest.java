@@ -20,6 +20,6 @@ public class CounterTest {
 
         int sum = counter.add(1, 10);
 
-        assertThat(sum , is(30));
+        assertThat(sum, is(30));
     }
 }

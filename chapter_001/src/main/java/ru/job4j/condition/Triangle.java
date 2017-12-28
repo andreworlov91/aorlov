@@ -19,7 +19,7 @@ public class Triangle {
 
     /**
      * Метод вычисления полупериметра по длинам сторон.
-     *
+     * <p>
      * Формула.
      * (ab + ac + bc) / 2
      *
@@ -64,7 +64,9 @@ public class Triangle {
      * @return
      */
     private boolean exist(double ab, double ac, double bc) {
-        if ((ab < ac + bc) & (ac < ab + bc) & (bc < ab + ac)) return true;
+        if ((ab < ac + bc) & (ac < ab + bc) & (bc < ab + ac))  {
+            return true;
+        }
 
         return false;
     }
