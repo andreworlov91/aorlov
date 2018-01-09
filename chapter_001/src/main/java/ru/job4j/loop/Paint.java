@@ -1,5 +1,7 @@
 package ru.job4j.loop;
 
+import java.util.function.BiPredicate;
+
 /**
  * @author Andrew Orlov (stagereagle6@gmail.com)
  * @version $Id$
@@ -8,17 +10,52 @@ package ru.job4j.loop;
 public class Paint {
 
     /**
+     * Метод rightTrl для рисования
+     * правой стороны пирамиды в псевдографике.
+     *
+     * @param height - высота.
+     */
+    public String rightTrl(int height) {
+        return this.loopBy(
+                height,
+                height,
+                (row, column) -> row >= column
+        );
+    }
+
+    /**
+     * Метод leftTrl для рисования
+     * левой стороны пирамиды в псевдографике.
+     *
+     * @param height - высота.
+     */
+    public String leftTrl(int height) {
+        return this.loopBy(
+                height,
+                height,
+                (row, column) -> row >= height - column - 1
+        );
+    }
+
+    /**
      * Метод pyramid для рисования
      * пирамиды в псевдографике.
      *
      * @param height - высота.
      */
     public String pyramid(int height) {
+        return this.loopBy(
+                height,
+                2 * height - 1,
+                (row, column) -> row >= height - column - 1 && row + height - 1 >= column
+        );
+    }
+
+    private String loopBy(int height, int weight, BiPredicate<Integer, Integer> predict) {
         StringBuilder screen = new StringBuilder();
-        int weight = 2 * height - 1;
         for (int row = 0; row != height; row++) {
             for (int column = 0; column != weight; column++) {
-                if (row >= height - column - 1 && row + height - 1 >= column) {
+                if (predict.test(row, column)) {
                     screen.append("^");
                 } else {
                     screen.append(" ");
@@ -27,11 +64,5 @@ public class Paint {
             screen.append(System.lineSeparator());
         }
         return screen.toString();
-    }
-
-    public static void main(String ... args ) {
-        Paint paint = new Paint();
-
-        System.out.println(paint.pyramid(4));
     }
 }
