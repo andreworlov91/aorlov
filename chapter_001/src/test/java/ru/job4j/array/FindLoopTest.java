@@ -23,4 +23,16 @@ public class FindLoopTest {
 
         assertThat(searchIndex, is(3));
     }
+
+    /**
+     * test indexOf
+     */
+    @Test
+    public void whenAddElementThenWeGetIndeMinusOne() {
+        FindLoop findLoop = new FindLoop();
+        int[] mas = {0, 1, 4, 9};
+        int searchIndex = findLoop.indexOf(mas, 10);
+
+        assertThat(searchIndex, is(-1));
+    }
 }
