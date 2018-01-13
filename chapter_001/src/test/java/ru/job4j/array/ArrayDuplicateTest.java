@@ -15,10 +15,10 @@ import static org.junit.Assert.assertThat;
 public class ArrayDuplicateTest {
 
     /**
-     * test sort
+     * test remove
      */
     @Test
-    public void whenSortArrayWithTenElementsThenSortedArray() {
+    public void whenDeleteDuplicateElementsThenGetUniqueMassive() {
         ArrayDuplicate arrayDuplicate = new ArrayDuplicate();
 
         String[] array = arrayDuplicate.remove(new String[] {"Привет", "Мир", "Привет", "Супер", "Мир"});
