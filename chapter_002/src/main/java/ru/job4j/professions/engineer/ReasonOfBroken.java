@@ -7,9 +7,9 @@ package ru.job4j.professions.engineer;
  * @version $Id$
  * @since 0.1
  */
-public class ReasonOfBroken extends Engineer {
+public class ReasonOfBroken {
 
-    public String message;
+    private String message;
 
     public String getMessage() {
         return message;

@@ -1,6 +1,7 @@
 package ru.job4j.professions.doctor;
 
 import org.junit.Test;
+import ru.job4j.Profession;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -19,6 +20,8 @@ public class DoctorTest {
      */
     @Test
     public void whenOneDoctorHealsPacientThenWeGetWhoHealsSomeonePacient() {
-        assertThat(new Doctor("Сергей").heal(new Pacient("Дмитрий")).getMessage(), is("Доктор Сергей лечит пациента по имени: Дмитрий"));
+        Profession doctor =  new Doctor("Сергей");
+        Doctor doctor1 = (Doctor) doctor;
+        assertThat(doctor1.heal(new Pacient("Дмитрий")).getMessage(), is("Доктор Сергей лечит пациента по имени: Дмитрий"));
     }
 }

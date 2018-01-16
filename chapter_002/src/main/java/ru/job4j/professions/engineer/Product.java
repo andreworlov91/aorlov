@@ -7,10 +7,12 @@ package ru.job4j.professions.engineer;
  * @version $Id$
  * @since 0.1
  */
-public class Product extends Engineer {
+public class Product {
 
-    public Product() {
+    private String name;
 
+    public String getName() {
+        return name;
     }
 
     public Product(String name) {

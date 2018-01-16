@@ -7,10 +7,12 @@ package ru.job4j.professions.teacher;
  * @version $Id$
  * @since 0.1
  */
-public class Pupil extends Teacher {
+public class Pupil {
 
-    public Pupil() {
+    private String name;
 
+    public String getName() {
+        return name;
     }
 
     public Pupil(String name) {

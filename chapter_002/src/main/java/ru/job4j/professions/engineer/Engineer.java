@@ -11,12 +11,8 @@ import ru.job4j.Profession;
  */
 public class Engineer extends Profession {
 
-    public Engineer() {
-
-    }
-
     public Engineer(String name) {
-        this.name = name;
+        super(name);
     }
 
     /**

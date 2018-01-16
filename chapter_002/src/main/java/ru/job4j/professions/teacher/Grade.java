@@ -7,9 +7,9 @@ package ru.job4j.professions.teacher;
  * @version $Id$
  * @since 0.1
  */
-public class Grade extends Teacher {
+public class Grade {
 
-    public String message;
+    private String message;
 
     public String getMessage() {
         return message;

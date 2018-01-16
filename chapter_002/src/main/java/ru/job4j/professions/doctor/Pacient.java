@@ -7,10 +7,12 @@ package ru.job4j.professions.doctor;
  * @version $Id$
  * @since 0.1
  */
-public class Pacient extends Doctor {
+public class Pacient {
 
-    public Pacient() {
+    private String name;
 
+    public String getName() {
+        return name;
     }
 
     public Pacient(String name) {

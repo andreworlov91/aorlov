@@ -7,9 +7,9 @@ package ru.job4j.professions.doctor;
  * @version $Id$
  * @since 0.1
  */
-public class Diagnose extends Doctor {
+public class Diagnose {
 
-    public String message;
+    private String message;
 
     public String getMessage() {
         return message;

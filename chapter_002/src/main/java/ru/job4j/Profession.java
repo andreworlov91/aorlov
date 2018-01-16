@@ -9,7 +9,11 @@ package ru.job4j;
  */
 public class Profession {
 
-    public String name;
+    private String name;
+
+    public Profession(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return this.name;
