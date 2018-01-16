@@ -1,8 +1,5 @@
 package ru.job4j;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * @author Andrew Orlov (stagereagle6@gmail.com)
  * @version $Id$
@@ -14,12 +11,22 @@ public class WordInOtherWord {
      * Метод sort для сортировки массива
      * пузырьковым методом.
      *
-     * @param  origin - полная строка для проверки.
-     * @param  sub - подстрока.
+     * @param origin - полная строка для проверки.
+     * @param sub    - подстрока.
      */
-    boolean contains(String origin, String sub) {
-            Pattern p = Pattern.compile("(" + sub + ")");
-            Matcher m = p.matcher(origin);
-            return m.find();
+    public boolean contains(String origin, String sub) {
+        if (sub.length() > origin.length()) return false;
+
+        char[] original = origin.toCharArray();
+        char[] substr = sub.toCharArray();
+
+        for (int i = 0; i <= (original.length - substr.length); i++) {
+            for (int j = 0; j < substr.length; j++) {
+                if (original[i + j] != substr[j]) break;
+                if (j == substr.length - 1) return true;
+            }
+        }
+
+        return false;
     }
 }
