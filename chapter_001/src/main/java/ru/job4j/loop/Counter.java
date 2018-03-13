@@ -8,7 +8,7 @@ package ru.job4j.loop;
  * @since 0.1
  */
 public class Counter {
-
+ 
     /**
      * Метод add для подсчёта суммы чётных чисел
      * в указанном диапазоне.
